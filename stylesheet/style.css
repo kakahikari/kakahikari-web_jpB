@@ -1,0 +1,320 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+@font-face {
+  font-family: myFont;
+  font-style: normal;
+  font-weight: 300;
+  unicode-range: U+123, U+456-7FF, U+9??;
+  src: local("Ubuntu Light"), local("Ubuntu-Light"), url(http://themes.googleusercontent.com/static/fonts/ubuntu/v5/_aijTyevf54tkVDLy-dlnD8E0i7KZn-EPnyo3HZu7kw.woff) format("woff"); }
+@font-face {
+  font-family: myFont;
+  font-style: normal;
+  font-weight: 400;
+  unicode-range: U+123, U+456-7FF, U+9??;
+  src: local("Ubuntu"), url(http://themes.googleusercontent.com/static/fonts/ubuntu/v5/_xyN3apAT_yRRDeqB3sPRg.woff) format("woff"); }
+@font-face {
+  font-family: myFont;
+  font-style: normal;
+  font-weight: 500;
+  unicode-range: U+123, U+456-7FF, U+9??;
+  src: local("Ubuntu Medium"), local("Ubuntu-Medium"), url(http://themes.googleusercontent.com/static/fonts/ubuntu/v5/OsJ2DjdpjqFRVUSto6IffD8E0i7KZn-EPnyo3HZu7kw.woff) format("woff"); }
+@font-face {
+  font-family: myFont;
+  font-style: normal;
+  font-weight: 700;
+  unicode-range: U+123, U+456-7FF, U+9??;
+  src: local("Ubuntu Bold"), local("Ubuntu-Bold"), url(http://themes.googleusercontent.com/static/fonts/ubuntu/v5/0ihfXUL2emPh0ROJezvraD8E0i7KZn-EPnyo3HZu7kw.woff) format("woff"); }
+body {
+  font-size: 16px;
+  color: #404040; }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+a {
+  color: #404040;
+  text-decoration: none; }
+
+header.top {
+  margin: 0 auto;
+  width: 100%;
+  min-height: 127px;
+  max-width: 860px; }
+  header.top .title {
+    margin: 18px auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 476px;
+    min-height: 127px;
+    padding-left: 111px;
+    background: url("../images/logo.png") no-repeat left center;
+    background-size: 89px 89px !important; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      header.top .title {
+        background: url("../images/logo@2x.png") no-repeat left center; } }
+    header.top .title img {
+      width: 100%;
+      height: auto; }
+
+.container.index {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 860px;
+  border-top: #FF9FB1 3px solid; }
+  .container.index .banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 360px;
+    background: url("../images/banner.jpg") no-repeat;
+    background-size: contain !important; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .container.index .banner {
+        background: url("../images/banner@2x.jpg") no-repeat; } }
+    .container.index .banner .item {
+      margin: 32px 14px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: #FFBC10;
+      color: #fff;
+      text-align: center; }
+
+.container.index2 header {
+  margin: 0 auto;
+  width: 100%;
+  padding: 108px 65px 0;
+  max-width: 860px;
+  height: 158px;
+  background: url("../images/banner2.jpg") no-repeat;
+  background-size: contain !important;
+  font-size: 2.25em;
+  color: #fff; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .container.index2 header {
+      background: url("../images/banner2@2x.jpg") no-repeat; } }
+.container.index2 .content {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 860px;
+  min-height: 312px;
+  padding: 48px 60px;
+  color: #fff;
+  background: #FF9FB1;
+  line-height: 2.25em; }
+.container.index2 .page2 li {
+  margin: 24px 0;
+  padding-left: 19px;
+  background: url("../images/tri.png") no-repeat left center;
+  background-size: 12px 12px !important;
+  line-height: 1.2em; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .container.index2 .page2 li {
+      background: url("../images/tri@2x.png") no-repeat left center; } }
+.container.index2 .page2 .content {
+  background: #FF9FB1 url("../images/image02.png") no-repeat right 82px bottom;
+  background-size: 116px 146px !important; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .container.index2 .page2 .content {
+      background: #FF9FB1 url("../images/image02@2x.png") no-repeat right 82px bottom; } }
+
+nav.index {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 860px; }
+  nav.index ol {
+    display: flex;
+    flex-wrap: wrap; }
+    nav.index ol li {
+      width: 25%;
+      height: 75px;
+      background: #FF9FB1;
+      text-align: center; }
+      nav.index ol li:hover {
+        background: #ff7e96; }
+      nav.index ol li:nth-of-type(1) a:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: calc(50% - 32px);
+        width: 64px;
+        height: 64px;
+        background: url("../images/menu1.png") no-repeat center center;
+        background-size: contain !important; }
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          nav.index ol li:nth-of-type(1) a:after {
+            background: url("../images/menu1@2x.png") no-repeat center center; } }
+      nav.index ol li:nth-of-type(2) a:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: calc(50% - 32px);
+        width: 64px;
+        height: 64px;
+        background: url("../images/menu2.png") no-repeat center center;
+        background-size: contain !important; }
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          nav.index ol li:nth-of-type(2) a:after {
+            background: url("../images/menu2@2x.png") no-repeat center center; } }
+      nav.index ol li:nth-of-type(3) a:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: calc(50% - 32px);
+        width: 64px;
+        height: 64px;
+        background: url("../images/menu3.png") no-repeat center center;
+        background-size: contain !important; }
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          nav.index ol li:nth-of-type(3) a:after {
+            background: url("../images/menu3@2x.png") no-repeat center center; } }
+      nav.index ol li:nth-of-type(4) a:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: calc(50% - 32px);
+        width: 64px;
+        height: 64px;
+        background: url("../images/menu4.png") no-repeat center center;
+        background-size: contain !important; }
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          nav.index ol li:nth-of-type(4) a:after {
+            background: url("../images/menu4@2x.png") no-repeat center center; } }
+      nav.index ol li:nth-of-type(5) a:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: calc(50% - 32px);
+        width: 64px;
+        height: 64px;
+        background: url("../images/menu5.png") no-repeat center center;
+        background-size: contain !important; }
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          nav.index ol li:nth-of-type(5) a:after {
+            background: url("../images/menu5@2x.png") no-repeat center center; } }
+      nav.index ol li:nth-of-type(6) a:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: calc(50% - 32px);
+        width: 64px;
+        height: 64px;
+        background: url("../images/menu6.png") no-repeat center center;
+        background-size: contain !important; }
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          nav.index ol li:nth-of-type(6) a:after {
+            background: url("../images/menu6@2x.png") no-repeat center center; } }
+      nav.index ol li:nth-of-type(7) a:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: calc(50% - 32px);
+        width: 64px;
+        height: 64px;
+        background: url("../images/menu7.png") no-repeat center center;
+        background-size: contain !important; }
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          nav.index ol li:nth-of-type(7) a:after {
+            background: url("../images/menu7@2x.png") no-repeat center center; } }
+      nav.index ol li:nth-of-type(8) a:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: calc(50% - 32px);
+        width: 64px;
+        height: 64px;
+        background: url("../images/menu8.png") no-repeat center center;
+        background-size: contain !important; }
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          nav.index ol li:nth-of-type(8) a:after {
+            background: url("../images/menu8@2x.png") no-repeat center center; } }
+      nav.index ol li a {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        color: #fff;
+        padding-left: 64px; }
+
+nav.index2 {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 860px;
+  padding: 0 60px;
+  background: #C6010A; }
+  nav.index2 ol {
+    display: flex;
+    flex-direction: row; }
+    nav.index2 ol li a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 90px;
+      height: 40px;
+      color: #fff;
+      font-size: .75em;
+      background: #C6010A; }
+      nav.index2 ol li a:hover {
+        background: #EC0A00; }
+
+footer {
+  margin: 8px auto;
+  width: 100%;
+  max-width: 860px;
+  color: #ABB4BD;
+  text-align: right;
+  font-size: .75em; }

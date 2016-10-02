@@ -1,0 +1,198 @@
+@charset "UTF-8";
+$fonts:myFont, "Noto Sans TC","微軟正黑體", "Microsoft JhengHei", "PMingLiU", AppleGothic, Dotum, Lucida Grande, Verdana Sans-serif;
+//---------------------------------
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@font-face {
+  font-family: myFont;
+  font-style: normal;
+  font-weight: 300;
+  unicode-range: U+123, U+456-7FF, U+9??;
+  src: local('Ubuntu Light'), local('Ubuntu-Light'), url(http://themes.googleusercontent.com/static/fonts/ubuntu/v5/_aijTyevf54tkVDLy-dlnD8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font-family: myFont;
+  font-style: normal;
+  font-weight: 400;
+  unicode-range: U+123, U+456-7FF, U+9??;
+  src: local('Ubuntu'), url(http://themes.googleusercontent.com/static/fonts/ubuntu/v5/_xyN3apAT_yRRDeqB3sPRg.woff) format('woff');
+}
+@font-face {
+  font-family: myFont;
+  font-style: normal;
+  font-weight: 500;
+  unicode-range: U+123, U+456-7FF, U+9??;
+  src: local('Ubuntu Medium'), local('Ubuntu-Medium'), url(http://themes.googleusercontent.com/static/fonts/ubuntu/v5/OsJ2DjdpjqFRVUSto6IffD8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font-family: myFont;
+  font-style: normal;
+  font-weight: 700;
+  unicode-range: U+123, U+456-7FF, U+9??;
+  src: local('Ubuntu Bold'), local('Ubuntu-Bold'), url(http://themes.googleusercontent.com/static/fonts/ubuntu/v5/0ihfXUL2emPh0ROJezvraD8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+%clear {
+  clear: both;
+  overflow: auto;
+  zoom: 1;
+  &:before,&:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+%mid {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+%dib {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+%pure {
+  padding: 0;
+  border:0;
+  outline: 0;
+}
+%fl {
+  position: relative;
+  float: left;
+}
+%fr {
+  position: relative;
+  float: right;
+}
+// %hide-text {
+//   @include hide-text;
+// }
+// %noSelect {
+//   @include user-select(none);
+//   &::-moz-selection {
+//     background: transparent;
+//   }
+//   &::selection {
+//       background: transparent;
+//   }
+// }
+@mixin css3($property, $value) {
+  @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+    #{$prefix}#{$property}: $value;
+  }
+}
+@mixin bg($url:'') {
+  background: image-url($url) 50% 50% no-repeat;
+  width: image-width($url);
+  height: image-height($url);
+}
+@mixin blank {
+  background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QURFRTlGM0JCNjFBMTFFMzkzOEE5QkVFNDNFMERCMTMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QURFRTlGM0NCNjFBMTFFMzkzOEE5QkVFNDNFMERCMTMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBREVFOUYzOUI2MUExMUUzOTM4QTlCRUU0M0UwREIxMyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBREVFOUYzQUI2MUExMUUzOTM4QTlCRUU0M0UwREIxMyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnZPikYAAAAQSURBVHjaYvr//z8DQIABAAkGAwD4D4dkAAAAAElFTkSuQmCC') repeat;
+}
+@mixin posi($x:0,$y:0,$position:absolute,$imgUrl:'') {
+  @if $position == relative {
+    position: $position;
+    left: 0px + $x;
+  }
+  @else if $position == posi {
+    position: absolute;
+    left: 0px + $x;
+  }
+  @else if $position == img {
+    position: absolute;
+    left: 50%;
+    margin-left: -(image-width($imgUrl) / 2);
+    width: image-width($imgUrl);
+    height: image-height($imgUrl);
+    background: image-url($imgUrl) center top no-repeat;
+  }
+  @else {
+    position: $position;
+    left: 50%;
+    margin: 0 0 0 (-(($ps_width/2) - $x));
+  }
+  @if $y == auto {
+    top: auto;
+  }
+  @else {
+    top: 0px + $y;
+  }
+}
+
+@mixin retina() {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    @content;
+  }
+}
+
+@mixin orientation( $portrait : true ) {
+  @media screen and ( orientation: #{ if($portrait, portrait, landscape) } ) {
+    @content;
+  }
+}
+
+@mixin breakpoint($point, $min: true)  {
+  @if $point == ie10 {
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      @content;
+    }
+  }
+  @else if $point == ie {
+    @media \0screen\,screen\9 {
+      @content;
+    }
+  }
+  @else {
+    @if $min == true {
+      @media only screen and (min-width: $point) {
+        @content;
+      }
+    }
+    @else {
+      @media only screen and (max-width: $point - 1) {
+        @content;
+      }
+    }
+  }
+}
+@mixin bihua($color:#000,$out:1px,$blur:2px) {
+  @include text-shadow(
+    $color $out $out $blur,
+    $color ($out*-1) $out $blur,
+    $color $out ($out*-1) $blur,
+    $color ($out*-1) ($out*-1) $blur
+    );
+}
+@mixin boxbihua($color:#000,$out:1px,$blur:2px) {
+  @include box-shadow(
+    $color $out $out $blur,
+    $color ($out*-1) $out $blur,
+    $color $out ($out*-1) $blur,
+    $color ($out*-1) ($out*-1) $blur
+    );
+}
+
+@mixin scale-image-ie($image) {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src="#{image_url($image, true, false)}",
+    sizingMethod="scale"
+  );
+}
+
+
+//$iconsq: sprite-map("btn/*.png"); // define a sprite map
+//@include get-sprite($iconsq, chuzhi);
+@mixin get-sprite($map, $sprite, $repeat: no-repeat, $height: true, $width: true) {
+  $sprite-image: sprite-file($map, $sprite);
+  $sprite-map: sprite-url($map);
+  $sprite-position: sprite-position($map, $sprite);
+  background: $sprite-map $sprite-position $repeat;
+  @if $height == true {
+    $sprite-height: image-height($sprite-image);
+    height: $sprite-height; }
+  @if $width == true {
+    $sprite-width: image-width($sprite-image);
+    width: $sprite-width; }
+}

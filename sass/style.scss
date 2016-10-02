@@ -1,0 +1,203 @@
+@import "compass/reset";
+@import "compass/css3/box-sizing";
+@import "_mix2";
+
+$phone: 568px;
+$pad: 768px;
+$pc: 860px;
+$hdpc: 1200px;
+
+$default: #404040;
+$pink: #FF9FB1;
+
+body {
+  font-size: 16px;
+  color: $default;
+}
+* {
+  @include box-sizing(border-box);
+}
+a {
+  color: $default;
+  text-decoration: none;
+}
+
+header.top {
+  margin: 0 auto;
+  width: 100%;
+  min-height: 127px;
+  max-width: $pc;
+  .title {
+    margin: 18px auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 476px;
+    min-height: 127px;
+    padding-left: 111px;
+    background: url("../images/logo.png") no-repeat left center;
+    background-size: 89px 89px !important;
+    @include retina {
+      background: url("../images/logo@2x.png") no-repeat left center;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+.container.index {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $pc;
+  border-top: $pink 3px solid;
+  .banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 360px;
+    background: url("../images/banner.jpg") no-repeat;
+    background-size: contain !important;
+    @include retina {
+      background: url("../images/banner@2x.jpg") no-repeat;
+    }
+    .item {
+      margin: 32px 14px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: #FFBC10;
+      color: #fff;
+      text-align: center;
+    }
+  }
+}
+.container.index2 {
+  header {
+    margin: 0 auto;
+    width: 100%;
+    padding: 108px 65px 0;
+    max-width: $pc;
+    height: 158px;
+    background: url("../images/banner2.jpg") no-repeat;
+    background-size: contain !important;
+    @include retina {
+      background: url("../images/banner2@2x.jpg") no-repeat;
+    }
+    font-size: 2.25em;
+    color: #fff;
+  }
+  .content {
+    margin: 0 auto;
+    width: 100%;
+    max-width: $pc;
+    min-height: 312px;
+    padding: 48px 60px;
+    color: #fff;
+    background: $pink;
+    line-height: 2.25em;
+  }
+  .page2 {
+    li {
+      margin: 24px 0;
+      padding-left: 19px;
+      background: url("../images/tri.png") no-repeat left center;
+      background-size: 12px 12px !important;
+      @include retina {
+        background: url("../images/tri@2x.png") no-repeat left center;
+      }
+      line-height: 1.2em;
+    }
+    .content {
+      background: $pink url("../images/image02.png") no-repeat right 82px bottom;
+      background-size: 116px 146px !important;
+      @include retina {
+        background: $pink url("../images/image02@2x.png") no-repeat right 82px bottom;
+      }
+    }
+  }
+}
+nav.index {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $pc;
+  ol {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      width: 25%;
+      height: 75px;
+      background: $pink;
+      text-align: center;
+      &:hover {
+        background: #ff7e96;
+      }
+      @for $_i from 1 through 8 {
+        &:nth-of-type(#{$_i}) {
+          a {
+            &:after {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: calc(50% - 32px);
+              width: 64px;
+              height: 64px;
+              background: url("../images/menu#{$_i}.png") no-repeat center center;
+              background-size: contain !important;
+              @include retina {
+                background: url("../images/menu#{$_i}@2x.png") no-repeat center center;
+              }
+            }
+          }
+        }
+      }
+      a {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        color: #fff;
+        padding-left: 64px;
+      }
+    }
+  }
+}
+nav.index2 {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $pc;
+  padding: 0 60px;
+  background: #C6010A;
+  ol {
+    display: flex;
+    flex-direction: row;
+    li {
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 90px;
+        height: 40px;
+        color: #fff;
+        font-size: .75em;
+        background: #C6010A;
+        &:hover {
+          background: #EC0A00;
+        }
+      }
+    }
+  }
+}
+footer {
+  margin: 8px auto;
+  width: 100%;
+  max-width: $pc;
+  color: #ABB4BD;
+  text-align: right;
+  font-size: .75em;
+}
