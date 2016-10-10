@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -46,30 +46,6 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block; }
 
-@font-face {
-  font-family: myFont;
-  font-style: normal;
-  font-weight: 300;
-  unicode-range: U+123, U+456-7FF, U+9??;
-  src: local("Ubuntu Light"), local("Ubuntu-Light"), url(http://themes.googleusercontent.com/static/fonts/ubuntu/v5/_aijTyevf54tkVDLy-dlnD8E0i7KZn-EPnyo3HZu7kw.woff) format("woff"); }
-@font-face {
-  font-family: myFont;
-  font-style: normal;
-  font-weight: 400;
-  unicode-range: U+123, U+456-7FF, U+9??;
-  src: local("Ubuntu"), url(http://themes.googleusercontent.com/static/fonts/ubuntu/v5/_xyN3apAT_yRRDeqB3sPRg.woff) format("woff"); }
-@font-face {
-  font-family: myFont;
-  font-style: normal;
-  font-weight: 500;
-  unicode-range: U+123, U+456-7FF, U+9??;
-  src: local("Ubuntu Medium"), local("Ubuntu-Medium"), url(http://themes.googleusercontent.com/static/fonts/ubuntu/v5/OsJ2DjdpjqFRVUSto6IffD8E0i7KZn-EPnyo3HZu7kw.woff) format("woff"); }
-@font-face {
-  font-family: myFont;
-  font-style: normal;
-  font-weight: 700;
-  unicode-range: U+123, U+456-7FF, U+9??;
-  src: local("Ubuntu Bold"), local("Ubuntu-Bold"), url(http://themes.googleusercontent.com/static/fonts/ubuntu/v5/0ihfXUL2emPh0ROJezvraD8E0i7KZn-EPnyo3HZu7kw.woff) format("woff"); }
 body {
   font-size: 16px;
   color: #404040; }
@@ -110,11 +86,13 @@ header.top {
   margin: 0 auto;
   width: 100%;
   max-width: 860px;
-  border-top: #FF9FB1 3px solid; }
+  border-top: #FFC8D2 3px solid; }
   .container.index .banner {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    align-items: flex-end;
     height: 360px;
     background: url("../images/banner.jpg") no-repeat;
     background-size: contain !important; }
@@ -132,7 +110,23 @@ header.top {
       background: #FFBC10;
       color: #fff;
       text-align: center; }
+    .container.index .banner .language {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      display: block;
+      width: 42px;
+      height: 18px;
+      background: url("../images/language.png") no-repeat;
+      background-size: contain !important; }
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        .container.index .banner .language {
+          background: url("../images/language@2x.png") no-repeat; } }
 
+.container.index2 article {
+  display: none; }
+  .container.index2 article.js-active {
+    display: block; }
 .container.index2 header {
   margin: 0 auto;
   width: 100%;
@@ -153,7 +147,7 @@ header.top {
   min-height: 312px;
   padding: 48px 60px;
   color: #fff;
-  background: #FF9FB1;
+  background: #FFC8D2;
   line-height: 2.25em; }
 .container.index2 .page2 li {
   margin: 24px 0;
@@ -165,11 +159,97 @@ header.top {
     .container.index2 .page2 li {
       background: url("../images/tri@2x.png") no-repeat left center; } }
 .container.index2 .page2 .content {
-  background: #FF9FB1 url("../images/image02.png") no-repeat right 82px bottom;
+  background: #FFC8D2 url("../images/image02.png") no-repeat right 82px bottom;
   background-size: 116px 146px !important; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .container.index2 .page2 .content {
-      background: #FF9FB1 url("../images/image02@2x.png") no-repeat right 82px bottom; } }
+      background: #FFC8D2 url("../images/image02@2x.png") no-repeat right 82px bottom; } }
+.container.index2 .page3 ol {
+  display: flex; }
+  .container.index2 .page3 ol li {
+    position: relative;
+    margin: 0 2px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 245px;
+    height: 245px;
+    padding-top: 38px;
+    border: 1px #fff solid;
+    border-radius: 5px; }
+    .container.index2 .page3 ol li:nth-of-type(1) {
+      background: url("../images/image03_1.png") no-repeat center center;
+      background-size: 65px 44px !important; }
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        .container.index2 .page3 ol li:nth-of-type(1) {
+          background: url("../images/image03_1@2x.png") no-repeat center center; } }
+    .container.index2 .page3 ol li:nth-of-type(2) {
+      background: url("../images/image03_2.png") no-repeat center center;
+      background-size: 54px 52px !important; }
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        .container.index2 .page3 ol li:nth-of-type(2) {
+          background: url("../images/image03_2@2x.png") no-repeat center center; } }
+    .container.index2 .page3 ol li:nth-of-type(3) {
+      background: url("../images/image03_3.png") no-repeat center center;
+      background-size: 64px 54px !important; }
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        .container.index2 .page3 ol li:nth-of-type(3) {
+          background: url("../images/image03_3@2x.png") no-repeat center center; } }
+    .container.index2 .page3 ol li:hover {
+      background-color: #FF9FB1; }
+    .container.index2 .page3 ol li span {
+      display: inline-block;
+      font-size: 1.25em;
+      text-align: center; }
+      .container.index2 .page3 ol li span:last-of-type {
+        width: 170px;
+        height: 40px;
+        font-size: .875em;
+        line-height: 1em; }
+.container.index2 .page4 li {
+  margin: 0 auto 11px;
+  width: 363px;
+  height: 45px;
+  padding-left: 28px;
+  background: url("../images/option.png") no-repeat center center;
+  background-size: 363px 45px !important;
+  line-height: 45px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .container.index2 .page4 li {
+      background: url("../images/option@2x.png") no-repeat center center; } }
+  .container.index2 .page4 li:hover {
+    background: url("../images/option_hover.png") no-repeat center center; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .container.index2 .page4 li:hover {
+        background: url("../images/option_hover@2x.png") no-repeat center center; } }
+.container.index2 .page4 .content {
+  background-color: #FFC8D2 !important;
+  background: url("../images/image04_1.png") no-repeat right bottom, url("../images/image04_2.png") no-repeat left bottom;
+  background-size: 220px 240px, 220px 240px !important; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .container.index2 .page4 .content {
+      background: url("../images/image04_1@2x.png") no-repeat right bottom, url("../images/image04_2@2x.png") no-repeat left bottom; } }
+.container.index2 .page5 ol {
+  padding-left: 93px; }
+.container.index2 .page5 li {
+  display: flex;
+  flex-direction: row; }
+  .container.index2 .page5 li span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 90px; }
+    .container.index2 .page5 li span:last-of-type {
+      justify-content: flex-start;
+      line-height: 1em; }
+.container.index2 .page5 .content {
+  background: #FFC8D2 url("../images/logo.png") no-repeat left center;
+  background-origin: content-box !important;
+  background-size: 91px 91px !important; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .container.index2 .page5 .content {
+      background: #FFC8D2 url("../images/logo@2x.png") no-repeat left center; } }
 
 nav.index {
   margin: 0 auto;
@@ -181,7 +261,7 @@ nav.index {
     nav.index ol li {
       width: 25%;
       height: 75px;
-      background: #FF9FB1;
+      background: #FFC8D2;
       text-align: center; }
       nav.index ol li:hover {
         background: #ff7e96; }
@@ -309,6 +389,8 @@ nav.index2 {
       font-size: .75em;
       background: #C6010A; }
       nav.index2 ol li a:hover {
+        background: #EC0A00; }
+      nav.index2 ol li a.js-active {
         background: #EC0A00; }
 
 footer {
