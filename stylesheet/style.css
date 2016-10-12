@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -47,6 +48,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block; }
 
 body {
+  font-family: myFont, "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", "PMingLiU", AppleGothic, Dotum, Lucida Grande, Verdana Sans-serif;
   font-size: 16px;
   color: #404040; }
 
