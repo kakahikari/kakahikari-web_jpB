@@ -61,6 +61,14 @@ a {
   color: #404040;
   text-decoration: none; }
 
+@media only screen and (min-width: 768px) {
+  .only-phone {
+    display: none !important; } }
+
+@media only screen and (max-width: 767px) {
+  .only-pc {
+    display: none !important; } }
+
 header.top {
   margin: 0 auto;
   width: 100%;
@@ -101,6 +109,17 @@ header.top {
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
       .container.index .banner {
         background: url("../images/banner@2x.jpg") no-repeat; } }
+    @media only screen and (max-width: 767px) {
+      .container.index .banner {
+        justify-content: center;
+        align-items: flex-start;
+        height: 462px;
+        background: url("../images/banner-mobile.jpg") no-repeat;
+        background-size: cover !important; } }
+  @media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-resolution: 192dpi) {
+    .container.index .banner {
+      background: url("../images/banner-mobile@2x.jpg") no-repeat; } }
+
     .container.index .banner .item {
       margin: 32px 14px;
       display: inline-flex;
@@ -112,18 +131,54 @@ header.top {
       background: #FFBC10;
       color: #fff;
       text-align: center; }
+      @media only screen and (max-width: 767px) {
+        .container.index .banner .item {
+          margin: 42px 7px;
+          width: 96px;
+          height: 96px; } }
     .container.index .banner .language {
       position: absolute;
       top: 14px;
       right: 14px;
-      display: block;
-      width: 42px;
-      height: 18px;
-      background: url("../images/language.png") no-repeat;
-      background-size: contain !important; }
-      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-        .container.index .banner .language {
-          background: url("../images/language@2x.png") no-repeat; } }
+      display: block; }
+      .container.index .banner .language a {
+        display: inline-block; }
+        .container.index .banner .language a.cht {
+          width: 18px;
+          height: 18px;
+          background: url("../images/cht.png") no-repeat;
+          background-size: contain !important; }
+          @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .container.index .banner .language a.cht {
+              background: url("../images/cht@2x.png") no-repeat; } }
+          .container.index .banner .language a.cht.active {
+            background: url("../images/cht_active.png") no-repeat; }
+            @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+              .container.index .banner .language a.cht.active {
+                background: url("../images/cht_active@2x.png") no-repeat; } }
+          .container.index .banner .language a.cht:hover {
+            background: url("../images/cht_hover.png") no-repeat; }
+            @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+              .container.index .banner .language a.cht:hover {
+                background: url("../images/cht_hover@2x.png") no-repeat; } }
+        .container.index .banner .language a.jp {
+          width: 18px;
+          height: 18px;
+          background: url("../images/jp.png") no-repeat;
+          background-size: contain !important; }
+          @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .container.index .banner .language a.jp {
+              background: url("../images/jp@2x.png") no-repeat; } }
+          .container.index .banner .language a.jp.active {
+            background: url("../images/jp_active.png") no-repeat; }
+            @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+              .container.index .banner .language a.jp.active {
+                background: url("../images/jp_active@2x.png") no-repeat; } }
+          .container.index .banner .language a.jp:hover {
+            background: url("../images/jp_hover.png") no-repeat; }
+            @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+              .container.index .banner .language a.jp:hover {
+                background: url("../images/jp_hover@2x.png") no-repeat; } }
 
 .container.index2 article {
   display: none; }
@@ -265,6 +320,9 @@ nav.index {
       height: 75px;
       background: #FFC8D2;
       text-align: center; }
+      @media only screen and (max-width: 767px) {
+        nav.index ol li {
+          height: 106px; } }
       nav.index ol li:hover {
         background: #ff7e96; }
       nav.index ol li:nth-of-type(1) a:after {
@@ -279,6 +337,9 @@ nav.index {
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
           nav.index ol li:nth-of-type(1) a:after {
             background: url("../images/menu1@2x.png") no-repeat center center; } }
+        @media only screen and (max-width: 767px) {
+          nav.index ol li:nth-of-type(1) a:after {
+            left: calc(50% - 32px); } }
       nav.index ol li:nth-of-type(2) a:after {
         content: "";
         position: absolute;
@@ -291,6 +352,9 @@ nav.index {
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
           nav.index ol li:nth-of-type(2) a:after {
             background: url("../images/menu2@2x.png") no-repeat center center; } }
+        @media only screen and (max-width: 767px) {
+          nav.index ol li:nth-of-type(2) a:after {
+            left: calc(50% - 32px); } }
       nav.index ol li:nth-of-type(3) a:after {
         content: "";
         position: absolute;
@@ -303,6 +367,9 @@ nav.index {
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
           nav.index ol li:nth-of-type(3) a:after {
             background: url("../images/menu3@2x.png") no-repeat center center; } }
+        @media only screen and (max-width: 767px) {
+          nav.index ol li:nth-of-type(3) a:after {
+            left: calc(50% - 32px); } }
       nav.index ol li:nth-of-type(4) a:after {
         content: "";
         position: absolute;
@@ -315,6 +382,9 @@ nav.index {
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
           nav.index ol li:nth-of-type(4) a:after {
             background: url("../images/menu4@2x.png") no-repeat center center; } }
+        @media only screen and (max-width: 767px) {
+          nav.index ol li:nth-of-type(4) a:after {
+            left: calc(50% - 32px); } }
       nav.index ol li:nth-of-type(5) a:after {
         content: "";
         position: absolute;
@@ -327,6 +397,9 @@ nav.index {
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
           nav.index ol li:nth-of-type(5) a:after {
             background: url("../images/menu5@2x.png") no-repeat center center; } }
+        @media only screen and (max-width: 767px) {
+          nav.index ol li:nth-of-type(5) a:after {
+            left: calc(50% - 32px); } }
       nav.index ol li:nth-of-type(6) a:after {
         content: "";
         position: absolute;
@@ -339,6 +412,9 @@ nav.index {
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
           nav.index ol li:nth-of-type(6) a:after {
             background: url("../images/menu6@2x.png") no-repeat center center; } }
+        @media only screen and (max-width: 767px) {
+          nav.index ol li:nth-of-type(6) a:after {
+            left: calc(50% - 32px); } }
       nav.index ol li:nth-of-type(7) a:after {
         content: "";
         position: absolute;
@@ -351,6 +427,9 @@ nav.index {
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
           nav.index ol li:nth-of-type(7) a:after {
             background: url("../images/menu7@2x.png") no-repeat center center; } }
+        @media only screen and (max-width: 767px) {
+          nav.index ol li:nth-of-type(7) a:after {
+            left: calc(50% - 32px); } }
       nav.index ol li:nth-of-type(8) a:after {
         content: "";
         position: absolute;
@@ -363,6 +442,9 @@ nav.index {
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
           nav.index ol li:nth-of-type(8) a:after {
             background: url("../images/menu8@2x.png") no-repeat center center; } }
+        @media only screen and (max-width: 767px) {
+          nav.index ol li:nth-of-type(8) a:after {
+            left: calc(50% - 32px); } }
       nav.index ol li a {
         position: relative;
         display: inline-flex;
@@ -371,6 +453,65 @@ nav.index {
         height: 100%;
         color: #fff;
         padding-left: 64px; }
+        @media only screen and (max-width: 767px) {
+          nav.index ol li a {
+            align-items: flex-end;
+            width: 100%;
+            padding-left: 0;
+            padding-bottom: 7px;
+            font-size: .8em; } }
+  nav.index .language {
+    height: 36px;
+    background: #FF9FB1;
+    line-height: 36px;
+    text-align: center; }
+    nav.index .language .arrow {
+      display: inline-block;
+      width: 17px;
+      height: 14px;
+      background: url("../images/arrow.png") no-repeat;
+      background-size: contain !important; }
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        nav.index .language .arrow {
+          background: url("../images/arrow@2x.png") no-repeat; } }
+    nav.index .language a {
+      display: inline-block; }
+      nav.index .language a.cht {
+        width: 18px;
+        height: 18px;
+        background: url("../images/cht.png") no-repeat;
+        background-size: contain !important; }
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          nav.index .language a.cht {
+            background: url("../images/cht@2x.png") no-repeat; } }
+        nav.index .language a.cht.active {
+          background: url("../images/cht_active.png") no-repeat; }
+          @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            nav.index .language a.cht.active {
+              background: url("../images/cht_active@2x.png") no-repeat; } }
+        nav.index .language a.cht:hover {
+          background: url("../images/cht_hover.png") no-repeat; }
+          @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            nav.index .language a.cht:hover {
+              background: url("../images/cht_hover@2x.png") no-repeat; } }
+      nav.index .language a.jp {
+        width: 18px;
+        height: 18px;
+        background: url("../images/jp.png") no-repeat;
+        background-size: contain !important; }
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          nav.index .language a.jp {
+            background: url("../images/jp@2x.png") no-repeat; } }
+        nav.index .language a.jp.active {
+          background: url("../images/jp_active.png") no-repeat; }
+          @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            nav.index .language a.jp.active {
+              background: url("../images/jp_active@2x.png") no-repeat; } }
+        nav.index .language a.jp:hover {
+          background: url("../images/jp_hover.png") no-repeat; }
+          @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            nav.index .language a.jp:hover {
+              background: url("../images/jp_hover@2x.png") no-repeat; } }
 
 nav.index2 {
   margin: 0 auto;

@@ -23,6 +23,16 @@ a {
   color: $default;
   text-decoration: none;
 }
+.only-phone {
+  @include breakpoint($pad) {
+    display: none !important;
+  }
+}
+.only-pc {
+  @include breakpoint($pad, false) {
+    display: none !important;
+  }
+}
 
 header.top {
   margin: 0 auto;
@@ -66,6 +76,16 @@ header.top {
     @include retina {
       background: url("../images/banner@2x.jpg") no-repeat;
     }
+    @include breakpoint($pad, flase) {
+      justify-content: center;
+      align-items: flex-start;
+      height: 462px;
+      background: url("../images/banner-mobile.jpg") no-repeat;
+      background-size: cover !important;
+      @include retina {
+        background: url("../images/banner-mobile@2x.jpg") no-repeat;
+      }
+    }
     .item {
       margin: 32px 14px;
       display: inline-flex;
@@ -77,18 +97,61 @@ header.top {
       background: #FFBC10;
       color: #fff;
       text-align: center;
+      @include breakpoint($pad, flase) {
+        margin: 42px 7px;
+        width: 96px;
+        height: 96px;
+      }
     }
     .language {
       position: absolute;
       top: 14px;
       right: 14px;
       display: block;
-      width: image-width("../images/language.png");
-      height: image-height("../images/language.png");
-      background: url("../images/language.png") no-repeat;
-      background-size: contain !important;
-      @include retina {
-        background: url("../images/language@2x.png") no-repeat;
+      a {
+        display: inline-block;
+        &.cht {
+          width: image-width("../images/cht.png");
+          height: image-height("../images/cht.png");
+          background: url("../images/cht.png") no-repeat;
+          background-size: contain !important;
+          @include retina {
+            background: url("../images/cht@2x.png") no-repeat;
+          }
+          &.active {
+            background: url("../images/cht_active.png") no-repeat;
+            @include retina {
+              background: url("../images/cht_active@2x.png") no-repeat;
+            }
+          }
+          &:hover {
+            background: url("../images/cht_hover.png") no-repeat;
+            @include retina {
+              background: url("../images/cht_hover@2x.png") no-repeat;
+            }
+          }
+        }
+        &.jp {
+          width: image-width("../images/jp.png");
+          height: image-height("../images/jp.png");
+          background: url("../images/jp.png") no-repeat;
+          background-size: contain !important;
+          @include retina {
+            background: url("../images/jp@2x.png") no-repeat;
+          }
+          &.active {
+            background: url("../images/jp_active.png") no-repeat;
+            @include retina {
+              background: url("../images/jp_active@2x.png") no-repeat;
+            }
+          }
+          &:hover {
+            background: url("../images/jp_hover.png") no-repeat;
+            @include retina {
+              background: url("../images/jp_hover@2x.png") no-repeat;
+            }
+          }
+        }
       }
     }
   }
@@ -270,6 +333,9 @@ nav.index {
       height: 75px;
       background: $pink;
       text-align: center;
+      @include breakpoint($pad, false) {
+        height: 106px;
+      }
       &:hover {
         background: #ff7e96;
       }
@@ -288,6 +354,9 @@ nav.index {
               @include retina {
                 background: url("../images/menu#{$_i}@2x.png") no-repeat center center;
               }
+              @include breakpoint($pad, false) {
+                left: calc(50% - 32px);
+              }
             }
           }
         }
@@ -300,6 +369,74 @@ nav.index {
         height: 100%;
         color: #fff;
         padding-left: 64px;
+        @include breakpoint($pad, false) {
+          align-items: flex-end;
+          width: 100%;
+          padding-left: 0;
+          padding-bottom: 7px;
+          font-size: .8em;
+        }
+      }
+    }
+  }
+  .language {
+    height: 36px;
+    background: $peach;
+    line-height: 36px;
+    text-align: center;
+    .arrow {
+      display: inline-block;
+      width: image-width("../images/arrow.png");
+      height: image-height("../images/arrow.png");
+      background: url("../images/arrow.png") no-repeat;
+      background-size: contain !important;
+      @include retina {
+        background: url("../images/arrow@2x.png") no-repeat;
+      }
+    }
+    a {
+      display: inline-block;
+      &.cht {
+        width: image-width("../images/cht.png");
+        height: image-height("../images/cht.png");
+        background: url("../images/cht.png") no-repeat;
+        background-size: contain !important;
+        @include retina {
+          background: url("../images/cht@2x.png") no-repeat;
+        }
+        &.active {
+          background: url("../images/cht_active.png") no-repeat;
+          @include retina {
+            background: url("../images/cht_active@2x.png") no-repeat;
+          }
+        }
+        &:hover {
+          background: url("../images/cht_hover.png") no-repeat;
+          @include retina {
+            background: url("../images/cht_hover@2x.png") no-repeat;
+          }
+        }
+      }
+      &.jp {
+        width: image-width("../images/jp.png");
+        height: image-height("../images/jp.png");
+        background: url("../images/jp.png") no-repeat;
+        background-size: contain !important;
+        @include retina {
+          background: url("../images/jp@2x.png") no-repeat;
+        }
+        &.active {
+          background: url("../images/jp_active.png") no-repeat;
+          @include retina {
+            background: url("../images/jp_active@2x.png") no-repeat;
+          }
+        }
+        &:hover {
+          background: url("../images/jp_hover.png") no-repeat;
+          @include retina {
+            background: url("../images/jp_hover@2x.png") no-repeat;
+          }
+        }
       }
     }
   }
