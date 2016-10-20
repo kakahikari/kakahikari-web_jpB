@@ -343,8 +343,13 @@ header.top {
       background: url("../images/image04_1@2x.png") no-repeat right 5% bottom, url("../images/image04_2@2x.png") no-repeat left 5% bottom; } }
   @media only screen and (max-width: 767px) {
     .container.index2 .page4 .content {
-      padding-bottom: 324px;
-      background-size: 45% auto, 45% auto !important; } }
+      padding-bottom: 320px;
+      background: url("../images/image04-mobile.png") no-repeat center bottom;
+      background-size: 100% auto !important; } }
+  @media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-resolution: 192dpi) {
+    .container.index2 .page4 .content {
+      background: url("../images/image04-mobile@2x.png") no-repeat center bottom; } }
+
 .container.index2 .page5 ol {
   padding-left: 93px; }
   @media only screen and (max-width: 767px) {
@@ -585,7 +590,8 @@ nav.index2 {
   width: 100%;
   max-width: 860px;
   padding: 0 60px;
-  background: #C6010A; }
+  background: #C6010A;
+  z-index: 99; }
   @media only screen and (max-width: 767px) {
     nav.index2 {
       position: fixed;
@@ -602,7 +608,7 @@ nav.index2 {
     left: calc(50% - 110px/2);
     width: 110px;
     height: 30px;
-    background: url('/images/../images/menubt.png?1476989854') no-repeat; }
+    background: url("../images/menubt.png") no-repeat; }
   nav.index2 ol {
     display: flex;
     flex-direction: row; }

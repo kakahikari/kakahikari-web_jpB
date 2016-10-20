@@ -9,6 +9,9 @@ $(function(){
   $(document).on('click','nav.index2 .open',function() {
     $('nav.index2').toggleClass('js-active');
   });
+  $(document).on('click','nav.index2 a',function() {
+    $('nav.index2').toggleClass('js-active');
+  });
   var menu = GetURLParameter('menu');
   $('nav.index2 li').eq(menu).children('a').click();
 });

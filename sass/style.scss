@@ -344,10 +344,12 @@ header.top {
         url("../images/image04_2@2x.png") no-repeat left 5% bottom;
       }
       @include breakpoint($pad, false) {
-        padding-bottom: 324px;
-        background-size:
-          45% auto,
-          45% auto !important;
+        padding-bottom: 320px;
+        background: url("../images/image04-mobile.png") no-repeat center bottom;
+        background-size: 100% auto !important;
+        @include retina {
+          background: url("../images/image04-mobile@2x.png") no-repeat center bottom;
+        }
       }
     }
   }
@@ -514,6 +516,7 @@ nav.index2 {
   max-width: $pc;
   padding: 0 60px;
   background: #C6010A;
+  z-index: 99;
   @include breakpoint($pad, false) {
     position: fixed;
     bottom: -424px;
@@ -531,7 +534,7 @@ nav.index2 {
     left: calc(50% - #{image-width('../images/menubt.png')}/2);
     width: image-width('../images/menubt.png');
     height: image-height('../images/menubt.png');
-    background: image-url('../images/menubt.png') no-repeat;
+    background: url('../images/menubt.png') no-repeat;
   }
   ol {
     display: flex;
