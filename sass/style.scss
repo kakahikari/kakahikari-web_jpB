@@ -39,6 +39,9 @@ header.top {
   width: 100%;
   min-height: 127px;
   max-width: $pc;
+  @include breakpoint($pad, false) {
+    padding: 0 22px;
+  }
   .title {
     margin: 18px auto 0;
     display: flex;
@@ -52,6 +55,10 @@ header.top {
     background-size: 89px 89px !important;
     @include retina {
       background: url("../images/logo@2x.png") no-repeat left center;
+    }
+    @include breakpoint($pad, false) {
+      padding-left: 71px;
+      background-size: 61px 61px !important;
     }
     img {
       width: 100%;
@@ -78,7 +85,7 @@ header.top {
     }
     @include breakpoint($pad, flase) {
       justify-content: center;
-      align-items: flex-start;
+      // align-items: flex-end;
       height: 462px;
       background: url("../images/banner-mobile.jpg") no-repeat;
       background-size: cover !important;
@@ -176,6 +183,16 @@ header.top {
     }
     font-size: 2.25em;
     color: #fff;
+    @include breakpoint($pad, false) {
+      padding: 63px 23px 0;
+      height: 110px;
+      background: url("../images/banner2-mobile.jpg") no-repeat right;
+      background-size: cover !important;
+      @include retina {
+        background: url("../images/banner2-mobile@2x.jpg") no-repeat right;
+      }
+      font-size: 2.14em;
+    }
   }
   .content {
     margin: 0 auto;
@@ -186,6 +203,9 @@ header.top {
     color: #fff;
     background: $pink;
     line-height: 2.25em;
+    @include breakpoint($pad, false) {
+      padding: 48px 22px;
+    }
   }
   .page2 {
     li {
@@ -204,23 +224,47 @@ header.top {
       @include retina {
         background: $pink url("../images/image02@2x.png") no-repeat right 82px bottom;
       }
+      @include breakpoint($pad, false) {
+        padding-bottom: 18px + 169px;
+        background: $pink url("../images/image02.png") no-repeat right center bottom;
+        background-size: 116px 146px !important;
+        @include retina {
+          background: $pink url("../images/image02@2x.png") no-repeat center bottom;
+        }
+      }
     }
   }
   .page3 {
     ol {
       display: flex;
+      @include breakpoint($pad, false) {
+        flex-direction: column;
+      }
       li {
         position: relative;
         margin: 0 2px;
         display: inline-flex;
         flex-direction: column;
-        justify-content: space-between;;
+        justify-content: space-between;
         align-items: center;
         width: 245px;
         height: 245px;
         padding-top: 38px;
         border: 1px #fff solid;
         border-radius: 5px;
+        @include breakpoint($pad, false) {
+          margin-bottom: 18px;
+          justify-content: center;
+          width: 100%;
+          height: 100px;
+          padding-top: 0;
+          padding-left: 10px + 64px + 11px;
+          padding-right: 11px;
+          background-color: $peach !important;
+          @include breakpoint($pad, false) {
+            background-position: left 11px center !important;
+          }
+        }
         &:nth-of-type(1) {
           background: url("../images/image03_1.png") no-repeat center center;
           background-size: image-width("../images/image03_1.png") image-height("../images/image03_1.png") !important;
@@ -249,11 +293,18 @@ header.top {
           display: inline-block;
           font-size: 1.25em;
           text-align: center;
+          @include breakpoint($pad, false) {
+            font-size: 1.1em;
+          }
           &:last-of-type {
             width: 170px;
             height: 40px;
             font-size: .875em;
             line-height: 1em;
+            @include breakpoint($pad, false) {
+              width: 100%;
+              height: auto;
+            }
           }
         }
       }
@@ -263,10 +314,11 @@ header.top {
     li {
       margin: 0 auto 11px;
       width: 363px;
+      max-width: 100%;
       height: 45px;
       padding-left: 28px;
       background: url("../images/option.png") no-repeat center center;
-      background-size: image-width("../images/option.png") image-height("../images/option.png") !important;
+      background-size: 100% 100% !important;
       @include retina {
         background: url("../images/option@2x.png") no-repeat center center;
       }
@@ -281,21 +333,31 @@ header.top {
     .content {
       background-color: $pink !important;
       background:
-      url("../images/image04_1.png") no-repeat right bottom,
-      url("../images/image04_2.png") no-repeat left bottom;
+      url("../images/image04_1.png") no-repeat right 5% bottom,
+      url("../images/image04_2.png") no-repeat left 5% bottom;
       background-size:
-      image-width("../images/image04_1.png") image-height("../images/image04_1.png"),
-      image-width("../images/image04_2.png") image-height("../images/image04_2.png") !important;
+      auto 90%,
+      auto 90% !important;
       @include retina {
         background:
-        url("../images/image04_1@2x.png") no-repeat right bottom,
-        url("../images/image04_2@2x.png") no-repeat left bottom;
+        url("../images/image04_1@2x.png") no-repeat right 5% bottom,
+        url("../images/image04_2@2x.png") no-repeat left 5% bottom;
+      }
+      @include breakpoint($pad, false) {
+        padding-bottom: 324px;
+        background-size:
+          45% auto,
+          45% auto !important;
       }
     }
   }
   .page5 {
     ol {
       padding-left: 93px;
+      @include breakpoint($pad, false) {
+        padding-top: 127px;
+        padding-left: 0;
+      }
     }
     li {
       display: flex;
@@ -318,6 +380,9 @@ header.top {
       @include retina {
         background: $pink url("../images/logo@2x.png") no-repeat left center;
       }
+      @include breakpoint($pad, false) {
+        background-position: center top 13px !important;
+      }
     }
   }
 }
@@ -335,9 +400,10 @@ nav.index {
       text-align: center;
       @include breakpoint($pad, false) {
         height: 106px;
+        background: $peach;
       }
       &:hover {
-        background: #ff7e96;
+        background: $peach;
       }
       @for $_i from 1 through 8 {
         &:nth-of-type(#{$_i}) {
@@ -442,15 +508,42 @@ nav.index {
   }
 }
 nav.index2 {
+  position: relative;
   margin: 0 auto;
   width: 100%;
   max-width: $pc;
   padding: 0 60px;
   background: #C6010A;
+  @include breakpoint($pad, false) {
+    position: fixed;
+    bottom: -424px;
+    left: 0;
+    padding: 0;
+    background: $peach;
+    transition: all .5s;
+  }
+  &.js-active {
+    bottom: 0;
+  }
+  .open {
+    position: absolute;
+    top: -1 * image-height('../images/menubt.png');
+    left: calc(50% - #{image-width('../images/menubt.png')}/2);
+    width: image-width('../images/menubt.png');
+    height: image-height('../images/menubt.png');
+    background: image-url('../images/menubt.png') no-repeat;
+  }
   ol {
     display: flex;
     flex-direction: row;
+    @include breakpoint($pad, false) {
+      flex-wrap: wrap;
+    }
     li {
+      position: relative;
+      @include breakpoint($pad, false) {
+        width: 50%;
+      }
       a {
         display: inline-flex;
         align-items: center;
@@ -460,11 +553,43 @@ nav.index2 {
         color: #fff;
         font-size: .75em;
         background: #C6010A;
+        @include breakpoint($pad, false) {
+          width: 100%;
+          height: 106px;
+          padding-top: 68px;
+          background: $peach;
+        }
         &:hover {
-          background: #EC0A00;
+          @include breakpoint($pad) {
+            background: #EC0A00;
+          }
         }
         &.js-active {
           background: #EC0A00;
+        }
+      }
+      @include breakpoint($pad, false) {
+        @for $_i from 1 through 8 {
+          &:nth-of-type(#{$_i}) {
+            a {
+              &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: calc(50% - 32px);
+                width: 64px;
+                height: 64px;
+                background: url("../images/menu#{$_i}.png") no-repeat center center;
+                background-size: contain !important;
+                @include retina {
+                  background: url("../images/menu#{$_i}@2x.png") no-repeat center center;
+                }
+                @include breakpoint($pad, false) {
+                  left: calc(50% - 32px);
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -477,4 +602,8 @@ footer {
   color: #ABB4BD;
   text-align: right;
   font-size: .75em;
+  @include breakpoint($pad, false) {
+    text-align: center;
+    padding-bottom: 30px;
+  }
 }

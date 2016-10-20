@@ -6,6 +6,9 @@ $(function(){
     $('.container.index2 article').removeClass('js-active');
     $('.container.index2 article').eq(_index).addClass('js-active')
   });
+  $(document).on('click','nav.index2 .open',function() {
+    $('nav.index2').toggleClass('js-active');
+  });
   var menu = GetURLParameter('menu');
   $('nav.index2 li').eq(menu).children('a').click();
 });
