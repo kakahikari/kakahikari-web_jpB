@@ -608,7 +608,8 @@ nav.index2 {
     left: calc(50% - 110px/2);
     width: 110px;
     height: 30px;
-    background: url("../images/menubt.png") no-repeat; }
+    background: url("../images/menubt.png") no-repeat;
+    z-index: 99; }
   nav.index2 ol {
     display: flex;
     flex-direction: row; }

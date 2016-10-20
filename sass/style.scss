@@ -535,6 +535,7 @@ nav.index2 {
     width: image-width('../images/menubt.png');
     height: image-height('../images/menubt.png');
     background: url('../images/menubt.png') no-repeat;
+    z-index: 99;
   }
   ol {
     display: flex;

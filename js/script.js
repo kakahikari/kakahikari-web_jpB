@@ -14,6 +14,7 @@ $(function(){
   });
   var menu = GetURLParameter('menu');
   $('nav.index2 li').eq(menu).children('a').click();
+  $('nav.index2').removeClass('js-active');
 });
 
 function GetURLParameter(sParam)
