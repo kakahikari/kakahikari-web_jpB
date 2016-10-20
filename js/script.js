@@ -17,6 +17,14 @@ $(function(){
   $('nav.index2').removeClass('js-active');
 });
 
+// iOS fix fixed
+  var u = navigator.userAgent, app = navigator.appVersion;
+  var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+
+  if (isIOS) {
+    $('nav.index2').addClass('js-fix-fixed');
+  }
+
 function GetURLParameter(sParam)
 {
     var sPageURL = window.location.search.substring(1);

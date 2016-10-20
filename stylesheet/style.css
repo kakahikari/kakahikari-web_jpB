@@ -48,6 +48,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block; }
 
 body {
+  position: relative;
   font-family: myFont, "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", "PMingLiU", AppleGothic, Dotum, Lucida Grande, Verdana Sans-serif;
   font-size: 16px;
   color: #404040; }
@@ -600,6 +601,10 @@ nav.index2 {
       padding: 0;
       background: #FF9FB1;
       transition: all .5s; } }
+  nav.index2.js-fix-fixed {
+    position: static !important; }
+    nav.index2.js-fix-fixed .open {
+      display: none; }
   nav.index2.js-active {
     bottom: 0; }
   nav.index2 .open {
@@ -639,8 +644,9 @@ nav.index2 {
         @media only screen and (min-width: 768px) {
           nav.index2 ol li a:hover {
             background: #EC0A00; } }
-        nav.index2 ol li a.js-active {
-          background: #EC0A00; }
+        @media only screen and (min-width: 768px) {
+          nav.index2 ol li a.js-active {
+            background: #EC0A00; } }
       @media only screen and (max-width: 767px) {
         nav.index2 ol li:nth-of-type(1) a:after {
           content: "";

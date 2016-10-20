@@ -12,6 +12,7 @@ $pink: #FFC8D2;
 $peach: #FF9FB1;
 
 body {
+  position: relative;
   font-family: $fonts;
   font-size: 16px;
   color: $default;
@@ -525,6 +526,12 @@ nav.index2 {
     background: $peach;
     transition: all .5s;
   }
+  &.js-fix-fixed {
+   position: static !important;
+   .open {
+     display: none;
+   }
+  }
   &.js-active {
     bottom: 0;
   }
@@ -569,7 +576,9 @@ nav.index2 {
           }
         }
         &.js-active {
-          background: #EC0A00;
+          @include breakpoint($pad) {
+            background: #EC0A00;
+          }
         }
       }
       @include breakpoint($pad, false) {
