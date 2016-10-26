@@ -36,6 +36,7 @@ a {
 }
 
 header.top {
+  position: relative;
   margin: 0 auto;
   width: 100%;
   min-height: 127px;
@@ -72,7 +73,7 @@ header.top {
   .language {
     position: absolute;
     top: 104px;
-    right: 30px;
+    right: 0;
     display: block;
     a {
       display: inline-block;
