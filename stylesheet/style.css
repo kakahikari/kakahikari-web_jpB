@@ -80,7 +80,7 @@ header.top {
     header.top {
       padding: 0 22px; } }
   header.top .title {
-    margin: 18px auto 0;
+    margin-top: 18px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -105,14 +105,14 @@ header.top {
       height: auto; }
   header.top .language {
     position: absolute;
-    top: 104px;
+    bottom: 14px;
     right: 0;
     display: block; }
     header.top .language a {
       display: inline-block; }
       header.top .language a.cht {
-        width: 18px;
-        height: 18px;
+        width: 21.6px;
+        height: 21.6px;
         background: url("../images/cht.png") no-repeat;
         background-size: contain !important; }
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -129,8 +129,8 @@ header.top {
             header.top .language a.cht:hover {
               background: url("../images/cht_hover@2x.png") no-repeat; } }
       header.top .language a.jp {
-        width: 18px;
-        height: 18px;
+        width: 21.6px;
+        height: 21.6px;
         background: url("../images/jp.png") no-repeat;
         background-size: contain !important; }
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {

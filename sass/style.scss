@@ -45,7 +45,8 @@ header.top {
     padding: 0 22px;
   }
   .title {
-    margin: 18px auto 0;
+    // margin: 18px auto 0;
+    margin-top: 18px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,14 +73,14 @@ header.top {
   }
   .language {
     position: absolute;
-    top: 104px;
+    bottom: 14px;
     right: 0;
     display: block;
     a {
       display: inline-block;
       &.cht {
-        width: image-width("../images/cht.png");
-        height: image-height("../images/cht.png");
+        width: image-width("../images/cht.png")*1.2;
+        height: image-height("../images/cht.png")*1.2;
         background: url("../images/cht.png") no-repeat;
         background-size: contain !important;
         @include retina {
@@ -99,8 +100,8 @@ header.top {
         }
       }
       &.jp {
-        width: image-width("../images/jp.png");
-        height: image-height("../images/jp.png");
+        width: image-width("../images/jp.png")*1.2;
+        height: image-height("../images/jp.png")*1.2;
         background: url("../images/jp.png") no-repeat;
         background-size: contain !important;
         @include retina {
