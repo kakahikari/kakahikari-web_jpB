@@ -224,17 +224,17 @@ header.top {
       line-height: 1.2em;
     }
     .content {
-      background: $pink url("../images/image02.png") no-repeat right 82px bottom;
+      background: $peach url("../images/image02.png") no-repeat right 82px bottom;
       background-size: 116px 146px !important;
       @include retina {
-        background: $pink url("../images/image02@2x.png") no-repeat right 82px bottom;
+        background: $peach url("../images/image02@2x.png") no-repeat right 82px bottom;
       }
       @include breakpoint($pad, false) {
         padding-bottom: 18px + 169px;
-        background: $pink url("../images/image02.png") no-repeat right center bottom;
+        background: $peach url("../images/image02.png") no-repeat right center bottom;
         background-size: 116px 146px !important;
         @include retina {
-          background: $pink url("../images/image02@2x.png") no-repeat center bottom;
+          background: $peach url("../images/image02@2x.png") no-repeat center bottom;
         }
       }
     }
@@ -336,7 +336,7 @@ header.top {
       }
     }
     .content {
-      background-color: $pink !important;
+      background-color: $peach !important;
       background:
       url("../images/image04_1.png") no-repeat right 5% bottom,
       url("../images/image04_2.png") no-repeat left 5% bottom;
@@ -381,11 +381,11 @@ header.top {
       }
     }
     .content {
-      background: $pink url("../images/logo.png") no-repeat left center;
+      background: $peach url("../images/logo.png") no-repeat left center;
       background-origin: content-box !important;
       background-size: image-width("../images/logo.png") image-height("../images/logo.png") !important;
       @include retina {
-        background: $pink url("../images/logo@2x.png") no-repeat left center;
+        background: $peach url("../images/logo@2x.png") no-repeat left center;
       }
       @include breakpoint($pad, false) {
         background-position: center top 13px !important;

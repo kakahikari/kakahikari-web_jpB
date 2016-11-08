@@ -235,19 +235,19 @@ header.top {
     .container.index2 .page2 li {
       background: url("../images/tri@2x.png") no-repeat left center; } }
 .container.index2 .page2 .content {
-  background: #FFC8D2 url("../images/image02.png") no-repeat right 82px bottom;
+  background: #FF9FB1 url("../images/image02.png") no-repeat right 82px bottom;
   background-size: 116px 146px !important; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .container.index2 .page2 .content {
-      background: #FFC8D2 url("../images/image02@2x.png") no-repeat right 82px bottom; } }
+      background: #FF9FB1 url("../images/image02@2x.png") no-repeat right 82px bottom; } }
   @media only screen and (max-width: 767px) {
     .container.index2 .page2 .content {
       padding-bottom: 187px;
-      background: #FFC8D2 url("../images/image02.png") no-repeat right center bottom;
+      background: #FF9FB1 url("../images/image02.png") no-repeat right center bottom;
       background-size: 116px 146px !important; } }
   @media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-resolution: 192dpi) {
     .container.index2 .page2 .content {
-      background: #FFC8D2 url("../images/image02@2x.png") no-repeat center bottom; } }
+      background: #FF9FB1 url("../images/image02@2x.png") no-repeat center bottom; } }
 
 .container.index2 .page3 ol {
   display: flex; }
@@ -334,7 +334,7 @@ header.top {
       .container.index2 .page4 li:hover {
         background: url("../images/option_hover@2x.png") no-repeat center center; } }
 .container.index2 .page4 .content {
-  background-color: #FFC8D2 !important;
+  background-color: #FF9FB1 !important;
   background: url("../images/image04_1.png") no-repeat right 5% bottom, url("../images/image04_2.png") no-repeat left 5% bottom;
   background-size: auto 90%, auto 90% !important; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -367,12 +367,12 @@ header.top {
       justify-content: flex-start;
       line-height: 1em; }
 .container.index2 .page5 .content {
-  background: #FFC8D2 url("../images/logo.png") no-repeat left center;
+  background: #FF9FB1 url("../images/logo.png") no-repeat left center;
   background-origin: content-box !important;
   background-size: 91px 91px !important; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .container.index2 .page5 .content {
-      background: #FFC8D2 url("../images/logo@2x.png") no-repeat left center; } }
+      background: #FF9FB1 url("../images/logo@2x.png") no-repeat left center; } }
   @media only screen and (max-width: 767px) {
     .container.index2 .page5 .content {
       background-position: center top 13px !important; } }
