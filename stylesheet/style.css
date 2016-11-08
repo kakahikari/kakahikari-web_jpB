@@ -89,20 +89,14 @@ header.top {
     min-height: 127px;
     padding-left: 111px;
     padding-right: 100px;
-    background: url("../images/logo.png") no-repeat left center;
-    background-size: 89px 89px !important; }
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-      header.top .title {
-        background: url("../images/logo@2x.png") no-repeat left center; } }
+    background: url("../images/logo.png") no-repeat left center, url("../images/title.png") no-repeat left 100px center;
+    background-size: 89px 89px, 364px 60px; }
     @media only screen and (max-width: 767px) {
       header.top .title {
         max-width: 476px;
         padding-left: 71px;
         padding-right: 0;
-        background-size: 61px 61px !important; } }
-    header.top .title img {
-      width: 100%;
-      height: auto; }
+        background-size: 61px 61px, 249px 41px; } }
   header.top .language {
     position: absolute;
     bottom: 14px;
@@ -226,7 +220,7 @@ header.top {
   min-height: 312px;
   padding: 48px 60px;
   color: #fff;
-  background: #FFC8D2;
+  background: #FF9FB1;
   line-height: 2.25em; }
   @media only screen and (max-width: 767px) {
     .container.index2 .content {
@@ -395,14 +389,14 @@ nav.index {
     nav.index ol li {
       width: 25%;
       height: 75px;
-      background: #FFC8D2;
+      background: #FF9FB1;
       text-align: center; }
       @media only screen and (max-width: 767px) {
         nav.index ol li {
           height: 106px;
           background: #FF9FB1; } }
       nav.index ol li:hover {
-        background: #FF9FB1; }
+        background: #FFC8D2; }
       nav.index ol li:nth-of-type(1) a:after {
         content: "";
         position: absolute;

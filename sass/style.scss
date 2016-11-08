@@ -55,20 +55,19 @@ header.top {
     min-height: 127px;
     padding-left: 111px;
     padding-right: 100px;
-    background: url("../images/logo.png") no-repeat left center;
-    background-size: 89px 89px !important;
-    @include retina {
-      background: url("../images/logo@2x.png") no-repeat left center;
-    }
+    background:
+      url("../images/logo.png") no-repeat left center,
+      url("../images/title.png") no-repeat left 100px center;
+    background-size:
+      89px 89px,
+      364px 60px;
     @include breakpoint($pad, false) {
       max-width: 476px;
       padding-left: 71px;
       padding-right: 0;
-      background-size: 61px 61px !important;
-    }
-    img {
-      width: 100%;
-      height: auto;
+      background-size:
+      61px 61px,
+      249px 41px;
     }
   }
   .language {
@@ -207,7 +206,7 @@ header.top {
     min-height: 312px;
     padding: 48px 60px;
     color: #fff;
-    background: $pink;
+    background: $peach;
     line-height: 2.25em;
     @include breakpoint($pad, false) {
       padding: 48px 22px;
@@ -409,14 +408,14 @@ nav.index {
     li {
       width: 25%;
       height: 75px;
-      background: $pink;
+      background: $peach;
       text-align: center;
       @include breakpoint($pad, false) {
         height: 106px;
         background: $peach;
       }
       &:hover {
-        background: $peach;
+        background: $pink;
       }
       @for $_i from 1 through 8 {
         &:nth-of-type(#{$_i}) {
